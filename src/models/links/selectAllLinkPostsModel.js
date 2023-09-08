@@ -17,6 +17,7 @@ const selectAllLinkPostsModel = async (keyword = '', userId = '',  sortBy = 'dat
                 L.id,
                 L.title,
                 L.url, 
+                L.description,
                 U.username,
                 BIT_OR(V.userId = ?) AS votedByMe, 
                 L.userId = ? AS owner,
