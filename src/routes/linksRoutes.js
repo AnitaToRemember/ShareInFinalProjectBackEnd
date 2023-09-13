@@ -33,7 +33,7 @@ router.get('/links', authUserOptional, listLinksController);
 router.get('/mylinks', authUser, listLinksByOwnerController);
 
 //Filter all the posts
-router.get('/links/filter', authUserOptional, listLinksController);
+router.get('/filter', authUserOptional, listLinksController);
 
 //Selecting an specific link post by id
 router.get('/links/:linkId', authUserOptional, linkPostExists, getLinkController);
