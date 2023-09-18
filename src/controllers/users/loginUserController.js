@@ -29,12 +29,11 @@ const loginUserController = async (req, res, next) => {
             invalidCredentialsError(); // passwords aren't equals
         } 
 
-        const user = new User(users[0].id, users[0].email, users[0].password, users[0].username);
+        const user = new User(users[0].id, users[0].email, users[0].password);
 
         res.status(201).json({
             id: user.id,
             email: user.email, 
-            userName: user.userName,
             token: getJwtToken(user.id)
         });
 
