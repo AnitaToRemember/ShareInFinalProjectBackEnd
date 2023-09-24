@@ -2,7 +2,7 @@
 const getDb = require('../../db/getDb');
 
 // Function that performs a database query to retrieve information about a specific entry.
-const selectLinkPostByIdModel = async (linkId, userId = '') => {
+const selectLinkPostOwnerModel = async (linkId, userId = '') => {
     let connection;
 
     try {
@@ -42,4 +42,4 @@ const selectLinkPostByIdModel = async (linkId, userId = '') => {
     }
 };
 
-module.exports = selectLinkPostByIdModel;
+module.exports = selectLinkPostOwnerModel;

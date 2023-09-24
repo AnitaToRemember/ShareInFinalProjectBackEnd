@@ -36,12 +36,12 @@ router.get('/mylinks', authUser, listLinksByOwnerController);
 router.get('/filter', authUserOptional, listLinksController);
 
 //Selecting an specific link post by id
-router.get('/links/id', authUserOptional, linkPostExists, getLinkController);
+router.get('/links/:linkId', authUserOptional, linkPostExists, getLinkController);
 
 //vote a link posted
-router.post('/links/id/votes', authUser, userExists, linkPostExists, votePostedLinkController);
+router.post('/links/:linkId/votes', authUser, userExists, linkPostExists, votePostedLinkController);
 
 //delete a posted link
-router.delete('/links/id', authUser, userExists, linkPostExists, deteleLinkByIdController);
+router.delete('/links/:linkId', authUser, userExists, linkPostExists, deteleLinkByIdController);
 
 module.exports = router;

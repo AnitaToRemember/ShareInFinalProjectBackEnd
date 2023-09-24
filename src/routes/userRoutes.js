@@ -16,6 +16,8 @@ const {
 
 //Importing intermediate controller functions 
 const { authUser, userExists } = require('../middlewares');
+const getUserLinkController = require('../controllers/users/getUserLinkController');
+const listLinksByOwnerController = require('../controllers/links/listLinksByOwnerController');
 
 // User register
 router.post('/users/register', registerUserControllers);
@@ -37,5 +39,9 @@ router.put('/users/password/recover', updatePasswordWithCodeController);
 
 //add avatar
 router.patch('/users/avatar', authUser, userExists, editUserAvatarController);
+
+//link by user id
+router.get('/users/:id/links', authUser, getUserLinkController);
+
 
 module.exports = router;

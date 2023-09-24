@@ -16,8 +16,8 @@ const listLinksByOwnerController = async (req, res, next) => {
                 links,
             },
         });
-    } catch (err) {
-        next(err);
+    } catch (error) {
+        next(error);
     }
 };
 
