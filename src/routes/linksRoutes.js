@@ -42,6 +42,6 @@ router.get('/links/id', authUserOptional, linkPostExists, getLinkController);
 router.post('/links/id/votes', authUser, userExists, linkPostExists, votePostedLinkController);
 
 //delete a posted link
-router.delete('/links/id', authUser, userExists, linkPostExists, deteleLinkByIdController);
+router.delete('/links/:linkId', authUser, userExists, linkPostExists, deteleLinkByIdController);
 
 module.exports = router;

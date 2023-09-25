@@ -7,7 +7,6 @@ const { notFoundError } = require('../services/errorService');
 // Check if the posted link exists.
 const linkPostExists = async (req, res, next) => {
     let connection;
-
     try {
         connection = await getDb();
 
