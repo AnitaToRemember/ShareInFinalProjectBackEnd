@@ -27,7 +27,7 @@ const editUserAvatarController = async (req, res, next) => {
 
         // Save the avatar in the file upload directory. Resize to a width of 100 pixels.
         
-        const avatarName = await savePhotoService(req.files.avatar, 100);
+        const avatarName = await savePhotoService(req.files.avatar, 1024);
 
         // Update user data with the obtained avatar name.
         await updateUserAvatarModel(avatarName, req.user.id);

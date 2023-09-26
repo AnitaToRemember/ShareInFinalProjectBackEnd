@@ -20,7 +20,7 @@ const selectAllLinkPostsModel = async (keyword = '', userId = '',  sortBy = 'dat
                 L.description,
                 U.username,
                 BIT_OR(V.userId = ?) AS votedByMe, 
-                L.userId = ? AS owner,
+                L.userId,
                 AVG(IFNULL(V.value, 0)) AS votes,
                 L.createdAt
             FROM links L
