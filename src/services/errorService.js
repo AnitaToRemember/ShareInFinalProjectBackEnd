@@ -59,7 +59,7 @@ module.exports = {
         throw {
             httpStatus: 500, // Internal server error
             code: 'RECOVERY_PASS_NOT_MATCH',
-            message: 'El código de recuperación no es valido',
+            message: 'The recovery code is not valid',
         };
     },
 
@@ -67,7 +67,7 @@ module.exports = {
         throw {
             httpStatus: 500, // Internal Server Error
             code: 'FILE_SAVE_FAILED',
-            message: 'Error al guardar el archivo en el disco',
+            message: 'Error saving file to disk',
         };
     },
 
@@ -75,7 +75,7 @@ module.exports = {
         throw {
             httpStatus: 500, // Internal server error
             code: 'SEND_EMAIL_FAILED',
-            message: 'Error al enviar email',
+            message: 'Error sending email',
         };
     },
 
